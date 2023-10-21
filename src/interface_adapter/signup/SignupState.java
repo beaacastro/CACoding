@@ -1,8 +1,12 @@
 package interface_adapter.signup;
 
+import java.util.ArrayList;
+
 public class SignupState {
     private String username = "";
     private String usernameError = null;
+    private ArrayList<String> users = new ArrayList<>();
+    private String deletedError = null;
     private String password = "";
     private String passwordError = null;
     private String repeatPassword = "";
@@ -51,6 +55,14 @@ public class SignupState {
 
     public void setUsernameError(String usernameError) {
         this.usernameError = usernameError;
+    }
+
+    public void setDeleted(ArrayList<String> users){
+        this.users = users;
+    }
+
+    public void setDeletedError(String deletedError) {
+        this.deletedError = deletedError;
     }
 
     public void setPassword(String password) {
